@@ -447,6 +447,14 @@ body {
           align-items: center;
   height: 140px;
   border-bottom: 1px solid #4f4f4f;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 992px) {
+  .header__body {
+    height: 80px;
+  }
 }
 
 .header__logo {
@@ -462,6 +470,9 @@ body {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 252px;
+          flex: 0 0 252px;
 }
 
 .header__logo span {
@@ -475,6 +486,25 @@ body {
   transition: all 0.3s ease 0s;
 }
 
+@media (max-width: 992px) {
+  .header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 180px;
+            flex: 0 0 180px;
+  }
+  .header__logo span {
+    bottom: -18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 150px;
+            flex: 0 0 150px;
+  }
+}
+
 .header__image {
   margin: 0 10px 0 0;
   -webkit-box-flex: 0;
@@ -484,6 +514,14 @@ body {
 
 .header__image img {
   max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  .header__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+  }
 }
 
 .header__descriptor {
@@ -504,11 +542,52 @@ body {
   text-transform: uppercase;
 }
 
+@media (max-width: 992px) {
+  .header__descriptor {
+    font-size: 14px;
+  }
+  .header__descriptor p:first-child {
+    margin: 0 0 0 12px;
+  }
+  .header__descriptor p:last-child {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__descriptor p:first-child {
+    margin: 0 0 4px 0;
+  }
+  .header__descriptor p:last-child {
+    font-size: 16px;
+  }
+}
+
 .header__menu {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   margin: 0 20px 0 160px;
+}
+
+@media (max-width: 1365px) {
+  .header__menu {
+    margin: 0 20px 0 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__menu {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__menu {
+    display: none;
+  }
 }
 
 .header__list {
@@ -549,6 +628,14 @@ body {
 
 .header__list li:not(:first-child) {
   margin: 0 0 0 20px;
+}
+
+@media (max-width: 1200px) {
+  .header__list {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .header__link {
@@ -622,6 +709,44 @@ body {
   visibility: visible;
 }
 
+@media (max-width: 1365px) {
+  .header__visually-impaired {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__visually-impaired span {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__visually-impaired {
+    margin: 0 0 0 auto;
+  }
+  .header__visually-impaired p + span {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__visually-impaired {
+    margin: 0 20px 0 auto;
+  }
+  .header__visually-impaired p + span {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__visually-impaired {
+    margin: 0 10px 0 auto;
+  }
+}
+
 .header__burger {
   font-weight: bold;
   font-size: 13px;
@@ -629,6 +754,21 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.header__burger:hover span:first-child {
+  -webkit-transform: rotate(90deg) translate(0, -14px);
+          transform: rotate(90deg) translate(0, -14px);
+}
+
+.header__burger:hover span:last-child {
+  -webkit-transform: rotate(90deg) translate(0, 14px);
+          transform: rotate(90deg) translate(0, 14px);
+}
+
+.header__burger:hover .header__burger-menu {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header__burger-icon {
@@ -648,6 +788,8 @@ body {
 }
 
 .header__burger-icon span {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   height: 2px;
   background: #fff;
   display: inline-block;
@@ -665,6 +807,13 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 20px;
+}
+
+.header__burger-menu {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .header__burger-close {

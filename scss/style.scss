@@ -273,6 +273,10 @@ body {
 		align-items: center;
 		height: 140px;
 		border-bottom: 1px solid #4f4f4f;
+		transition: all 0.3s ease 0s;
+		@media (max-width:992px){
+			height: 80px;
+		}
 	}
 
 	&__logo {
@@ -281,6 +285,7 @@ body {
 		justify-content: center;
 		transition: all 0.3s ease 0s;
 		position: relative;
+		flex: 0 0 252px;
 		span {
 			position: absolute;
 			bottom: -35px;
@@ -290,6 +295,15 @@ body {
 			background-color: #fff;
 			transition: all 0.3s ease 0s;
 		}
+		@media (max-width:992px){
+			flex: 0 0 180px;
+			span{
+				bottom: -18px;
+			}
+		}
+		@media (max-width:360px) {
+			flex: 0 0 150px;
+		}
 	}
 
 	&__image {
@@ -297,6 +311,9 @@ body {
 		flex: 0 0 80px;
 		img {
 			max-width: 100%;
+		}
+		@media (max-width:992px){
+			flex: 0 0 50px;
 		}
 	}
 
@@ -314,11 +331,37 @@ body {
 			letter-spacing: -0.03em;
 			text-transform: uppercase;
 		}
+		@media (max-width:992px){
+			font-size: 14px;
+			p:first-child {
+				margin: 0 0 0 12px;
+			}
+			p:last-child{
+				font-size: 26px;
+			}
+		}
+		@media (max-width:360px) {
+			p:first-child {
+				margin: 0 0 4px 0;
+			}
+			p:last-child{
+				font-size: 16px;
+			}
+		}
 	}
 
 	&__menu {
 		flex: 1 1 auto;
 		margin: 0 20px 0 160px;
+		@media (max-width: 1365px) {
+			margin: 0 20px 0 50px;
+		}
+		@media (max-width: 1200px){
+			flex: none;
+		}
+		@media (max-width:992px) {
+			display: none;
+		}
 	}
 
 	&__list {
@@ -347,6 +390,9 @@ body {
 		}
 		li:not(:first-child) {
 			margin: 0 0 0 20px;
+		}
+		@media (max-width: 1200px){
+			justify-content: flex-end;
 		}
 	}
 
@@ -402,6 +448,29 @@ body {
 				visibility: visible;
 			}
 		}
+		@media (max-width: 1365px) {
+			flex: none;
+		}
+		@media (max-width: 1200px) {
+			span {
+				display: none;
+			}
+		}
+		@media (max-width:992px) {
+			margin: 0 0 0 auto;
+			p+span{
+				display: block;
+			}
+		}
+		@media (max-width:767px) {
+			margin: 0 20px 0 auto;
+			p+span{
+				display: none;
+			}
+		}
+		@media (max-width:360px){
+			margin: 0 10px 0 auto;
+		}
 	}
 
 	&__burger {
@@ -411,6 +480,20 @@ body {
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		cursor: pointer;
+		&:hover {
+			span {
+				&:first-child {
+					transform: rotate(90deg) translate(0, -14px);
+				}
+				&:last-child {
+					transform: rotate(90deg) translate(0, 14px);
+				}
+			}
+			.header__burger-menu {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
 	}
 
 	&__burger-icon {
@@ -421,6 +504,7 @@ body {
 		justify-content: space-between;
 		margin: 0 0 8px 0;
 		span {
+			transition: all 0.3s ease 0s;
 			height: 2px;
 			background: #fff;
 			display: inline-block;
@@ -438,6 +522,9 @@ body {
 	}
 
 	&__burger-menu {
+		opacity: 1;
+		visibility: visible;
+		transition: all 0.3s ease 0s;
 	}
 
 	&__burger-close {
