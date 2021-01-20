@@ -264,10 +264,10 @@ body {
 		width: 100%;
 		height: 100%;
 		background-color: #070707;
+		z-index: 2;
 	}
 	&__body {
 		position: relative;
-		z-index: 2;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -286,6 +286,7 @@ body {
 		transition: all 0.3s ease 0s;
 		position: relative;
 		flex: 0 0 252px;
+		z-index: 3;
 		span {
 			position: absolute;
 			bottom: -35px;
@@ -368,6 +369,8 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
+		z-index: 3;
 		li {
 			position: relative;
 			.underline {
@@ -418,6 +421,7 @@ body {
 		position: relative;
 		flex: 1 1 auto;
 		margin: 0 20px 0 0;
+		z-index: 3;
 		p {
 			flex: 0 0 40px;
 			margin: 0 10px 0 0;
@@ -480,6 +484,8 @@ body {
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		cursor: pointer;
+		position: relative;
+		z-index: 5;
 		&:hover {
 			span {
 				&:first-child {
@@ -519,6 +525,11 @@ body {
 				width: 20px;
 			}
 		}
+		&.active{
+			span{
+				background: #000;
+			}
+		}
 	}
 
 	&__burger-menu {
@@ -537,7 +548,13 @@ body {
 }
 
 .menu-board {
-	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 94%;
+	height: 900px;
+	background: #fff;
+	z-index: 4;
 	&__form {
 	}
 
