@@ -762,19 +762,47 @@ body {
   z-index: 5;
 }
 
-.header__burger:hover span:first-child {
-  -webkit-transform: rotate(90deg) translate(0, -14px);
-          transform: rotate(90deg) translate(0, -14px);
+@media (min-width: 1024px) {
+  .header__burger:hover span:first-child {
+    -webkit-transform: rotate(90deg) translate(0, -14px);
+            transform: rotate(90deg) translate(0, -14px);
+  }
+  .header__burger:hover span:last-child {
+    -webkit-transform: rotate(90deg) translate(0, 14px);
+            transform: rotate(90deg) translate(0, 14px);
+  }
+  .header__burger:hover .header__burger-menu {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-.header__burger:hover span:last-child {
-  -webkit-transform: rotate(90deg) translate(0, 14px);
-          transform: rotate(90deg) translate(0, 14px);
+.header__burger.active .header__burger-icon span {
+  background: #4f4f4f;
 }
 
-.header__burger:hover .header__burger-menu {
-  opacity: 0;
-  visibility: hidden;
+.header__burger.active .header__burger-close {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__burger.active .header__burger-icon {
+  width: 40px;
+}
+
+.header__burger.active .header__burger-icon span:first-child {
+  -webkit-transform: rotate(45deg) translate(3px, 0px);
+          transform: rotate(45deg) translate(3px, 0px);
+}
+
+.header__burger.active .header__burger-icon span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header__burger.active .header__burger-icon span:last-child {
+  -webkit-transform: rotate(45deg) translate(-3px, 1px);
+          transform: rotate(45deg) translate(-3px, 1px);
 }
 
 .header__burger-icon {
@@ -815,10 +843,6 @@ body {
   width: 20px;
 }
 
-.header__burger-icon.active span {
-  background: #000;
-}
-
 .header__burger-menu {
   opacity: 1;
   visibility: visible;
@@ -827,8 +851,14 @@ body {
 }
 
 .header__burger-close {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   color: #4f4f4f;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  top: 3px;
+  left: -90px;
 }
 
 .menu-board {
@@ -839,4 +869,9 @@ body {
   height: 900px;
   background: #fff;
   z-index: 4;
+  display: none;
+}
+
+.menu-board.active {
+  display: block;
 }
