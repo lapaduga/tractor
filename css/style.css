@@ -985,6 +985,18 @@ body.lock {
     padding: 0 80px 0 50px;
     font-size: 16px;
   }
+  .menu-board__input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .menu-board__input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .menu-board__input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .menu-board__input::placeholder {
+    font-size: 16px;
+  }
 }
 
 .menu-board__button {
@@ -1081,6 +1093,29 @@ body.lock {
   line-height: 40px;
   text-transform: uppercase;
   color: #070707;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .menu-board__heading::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -70px;
+    background: #070707;
+    width: 0%;
+    height: 3px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .menu-board__heading:hover::before {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .menu-board__list {
@@ -1112,4 +1147,29 @@ body.lock {
   line-height: 24px;
   text-transform: uppercase;
   color: #4f4f4f;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .menu-board__link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -40px;
+    background: #4f4f4f;
+    width: 0%;
+    height: 1px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .menu-board__link:hover::before {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    left: 0;
+  }
 }
