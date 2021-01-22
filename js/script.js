@@ -9,6 +9,11 @@ $(document).ready(function () {
 	//header height on scroll behaviour
 	window.onscroll = function () { scrollFunction() };
 	function scrollFunction() {
+		if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+			document.getElementById("header__body").style.background = "#070707";
+		} else {
+			document.getElementById("header__body").style.background = "transparent";
+		}
 		if (document.documentElement.clientWidth > 992) {
 			if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 				document.getElementById("header__body").style.height = "80px";
