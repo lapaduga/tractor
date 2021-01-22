@@ -1238,6 +1238,24 @@ body.lock {
   display: flex;
 }
 
+.footer__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 15%;
+          flex: 0 1 15%;
+}
+
+.footer__big-column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.footer__column-map {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+
 .footer__item {
   margin: 0px 40px 26px 0px;
 }

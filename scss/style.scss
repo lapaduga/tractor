@@ -823,9 +823,20 @@ body {
 		display: flex;
 	}
 
+	&__column{
+		flex: 0 1 15%;
+	}
+
+	&__big-column{
+		flex: 0 1 40%;
+	}
+
+	&__column-map{
+		flex: 0 1 30%;
+	}
+
 	&__item {
 		margin: 0px 40px 26px 0px;
-		
 	}
 
 	&__heading {
@@ -860,6 +871,18 @@ body {
 				}
 			}
 		}
+	}
+
+	&__map{
+
+	}
+
+	&__see{
+
+	}
+
+	&__map-bar{
+
 	}
 
 	&__list {
