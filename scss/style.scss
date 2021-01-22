@@ -275,7 +275,6 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #070707;
 		z-index: 2;
 	}
 	&__body {
@@ -308,6 +307,24 @@ body {
 			background-color: #fff;
 			transition: all 0.3s ease 0s;
 		}
+		&.shrink{
+			flex: 0 0 180px;
+			.header__image{
+				flex: 0 0 50px;
+			}
+			span{
+				bottom: -18px;
+			}
+			.header__descriptor{
+				font-size: 14px;
+				p:first-child {
+					margin: 0 0 0 12px;
+				}
+				p:last-child {
+					font-size: 26px;
+				}
+			}
+		}
 		@media (max-width: 992px) {
 			flex: 0 0 180px;
 			span {
@@ -322,6 +339,7 @@ body {
 	&__image {
 		margin: 0 10px 0 0;
 		flex: 0 0 80px;
+		transition: all 0.3s ease 0s;
 		img {
 			max-width: 100%;
 		}
@@ -334,6 +352,9 @@ body {
 		font-size: 16px;
 		text-transform: uppercase;
 		color: #ffffff;
+		p{
+			transition: all 0.3s ease 0s;
+		}
 		p:first-child {
 			margin: 0 0 0 14px;
 		}
