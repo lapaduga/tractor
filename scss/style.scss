@@ -955,20 +955,33 @@ body {
 		align-items: center;
 		justify-content: space-between;
 		border-top: 1px solid #4f4f4f;
+		padding: 20px 0;
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
 	}
 
 	&__text {
+		text-align: center;
 		font-size: 12px;
 		line-height: 18px;
 		text-transform: uppercase;
 		color: #4f4f4f;
 		margin: 0px 20px 0px 0px;
+		flex: 0 1 50%;
+		@media (max-width: 767px) {
+			margin: 0px 0px 10px 0px;
+		}
 	}
 
 	&__dev {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
+		flex: 0 1 50%;
+		@media (max-width: 360px) {
+			flex-direction: column;
+		}
 	}
 
 	&__dev-info {
