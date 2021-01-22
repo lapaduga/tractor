@@ -1492,14 +1492,18 @@ body.lock {
 }
 
 .footer__dev-logo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100px;
-          flex: 0 0 100px;
+  width: 100px;
   margin: 0px 0px 0px 20px;
 }
 
 .footer__dev-logo img {
   max-width: 100%;
+}
+
+@media (max-width: 360px) {
+  .footer__dev-logo {
+    margin: 10px 0px 0px 0px;
+  }
 }
 
 .main {

@@ -1002,10 +1002,13 @@ body {
 	}
 
 	&__dev-logo {
-		flex: 0 0 100px;
+		width: 100px;
 		margin: 0px 0px 0px 20px;
-		img{
+		img {
 			max-width: 100%;
+		}
+		@media (max-width: 360px) {
+			margin: 10px 0px 0px 0px;
 		}
 	}
 }
