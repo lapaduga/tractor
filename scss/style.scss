@@ -791,10 +791,19 @@ body {
 		border-bottom: 1px solid #4f4f4f;
 		border-top: 1px solid #4f4f4f;
 		margin: 0px 0px 60px 0px;
+		padding: 30px 0;
+		@media (max-width: 767px) {
+			margin: 0px 0px 40px 0px;
+			flex-direction: column;
+		}
 	}
 
 	&__subtitle {
 		margin: 0px 20px 0px 0px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 20px 0px;
+			text-align: center;
+		}
 	}
 
 	&__socials {
