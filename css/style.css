@@ -1269,7 +1269,7 @@ body.lock {
 
 @media (max-width: 1200px) {
   .footer__items {
-    height: 1200px;
+    height: 1100px;
   }
 }
 
@@ -1279,6 +1279,7 @@ body.lock {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    height: auto;
   }
 }
 
