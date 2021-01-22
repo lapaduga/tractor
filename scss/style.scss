@@ -962,7 +962,6 @@ body {
 	}
 
 	&__text {
-		text-align: center;
 		font-size: 12px;
 		line-height: 18px;
 		text-transform: uppercase;
@@ -971,6 +970,7 @@ body {
 		flex: 0 1 50%;
 		@media (max-width: 767px) {
 			margin: 0px 0px 10px 0px;
+			text-align: center;
 		}
 	}
 

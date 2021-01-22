@@ -1431,7 +1431,6 @@ body.lock {
 }
 
 .footer__text {
-  text-align: center;
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1445,6 +1444,7 @@ body.lock {
 @media (max-width: 767px) {
   .footer__text {
     margin: 0px 0px 10px 0px;
+    text-align: center;
   }
 }
 
