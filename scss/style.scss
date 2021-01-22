@@ -821,17 +821,6 @@ body {
 
 	&__items {
 		display: flex;
-		justify-content: space-between;
-		height: 400px;
-		@media (max-width:1600px) {
-			height: 800px;
-		}
-		@media (max-width:1200px) {
-			height: 1200px;
-		}
-		@media (max-width:992px) {
-			flex-direction: column-reverse;
-		}
 	}
 
 	&__item {
@@ -888,16 +877,6 @@ body {
 		&:hover{
 			text-decoration: underline;
 		}
-	}
-
-	&__column-info{
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-	}
-
-	&__column-map{
-		flex: 0 0 390px;
 	}
 
 	&__map {
