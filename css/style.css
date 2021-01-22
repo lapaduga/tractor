@@ -1248,6 +1248,11 @@ body.lock {
 
 @media (max-width: 767px) {
   .footer__socials-item {
+    height: 50px;
+    width: 50px;
+    margin: 0px 0px 0px 10px;
+  }
+  .footer__socials-item:first-child {
     margin: 0;
   }
 }
