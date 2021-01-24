@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -571,6 +572,7 @@ body.lock {
   top: 0;
   left: 0;
   z-index: 50;
+  background: #070707;
 }
 
 .header::before {
@@ -1863,4 +1865,97 @@ body.lock {
   -webkit-transform: translate(-40px, 0);
           transform: translate(-40px, 0);
   background: #fff;
+}
+
+.partners {
+  background: #141414;
+  margin: 0 0 140px 0;
+}
+
+.partners__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.partners__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.partners__item {
+  height: 90px;
+  width: 126px;
+  background: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  cursor: pointer;
+}
+
+.partners__item img {
+  max-width: 11px;
+}
+
+.partners__item.inactive {
+  background: #070707;
+  -webkit-transform: translate(0, 0%);
+          transform: translate(0, 0%);
+}
+
+.partners__blocks {
+  position: relative;
+  padding: 50px;
+}
+
+.partners__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.partners__block:last-child {
+  display: none;
+}
+
+.partners__slider {
+  min-width: 0;
+  /* Слайдер */
+  /* Слайдер запущен */
+  /* Слайдер с точками */
+  /* Ограничивающая оболочка */
+  /* Лента слайдов */
+  /* Слайд */
+  /* Слайд активный (показывается) */
+  /* Слайд основной */
+  /* Слайд по центру */
+  /* Клонированный слайд */
+  /* Стрелка */
+  /* Стрелка влево */
+  /* Стрелка вправо */
+  /* Стрелка не активная */
+  /* Точки (булиты) */
+  /* Активная точка */
+  /* Элемент точки */
+}
+
+.partners__slider .slick-list {
+  overflow: hidden;
+}
+
+.partners__slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

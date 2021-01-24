@@ -53,4 +53,24 @@ $(document).ready(function () {
 		$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
 		e.preventDefault();
 	});
+
+
+	// partners tabs
+	$('#tab-heading-1').on('click', function () {
+		$('#tab-heading-2').removeClass('inactive');
+		$('#tab-heading-1').addClass('inactive');
+		$('#tab_02').fadeOut(0);
+		$('#tab_01').fadeIn(300);
+	});
+	$('#tab-heading-2').on('click', function () {
+		$('#tab-heading-1').removeClass('inactive');
+		$('#tab-heading-2').addClass('inactive');
+		$('#tab_01').fadeOut(0);
+		$('#tab_02').fadeIn(300);
+	});
+
+	// partners slider
+	$('.partners__slider').slick({
+		arrows: false
+	});
 });
