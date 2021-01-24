@@ -1319,12 +1319,14 @@ body.lock {
   transition: all 0.3s ease 0s;
 }
 
-.footer__socials-item:hover {
-  border: 1px solid #4F4F4F;
-}
-
 .footer__socials-item img {
   max-width: 24px;
+}
+
+@media (min-width: 1024px) {
+  .footer__socials-item:hover {
+    border: 1px solid #4F4F4F;
+  }
 }
 
 @media (max-width: 767px) {
