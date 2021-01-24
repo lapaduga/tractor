@@ -62,6 +62,7 @@ $(document).ready(function () {
 		$('#tab_02').fadeOut(0);
 		$('#tab_01').fadeIn(300);
 		$('#tab_02').removeClass('absolute');
+		$('.partners__slider-1').slick('refresh');
 	});
 	$('#tab-heading-2').on('click', function () {
 		$('#tab-heading-1').removeClass('inactive');
@@ -75,12 +76,58 @@ $(document).ready(function () {
 	// partners slider
 	$('.partners__slider-1').slick({
 		arrows: false,
-		adaptiveHeight: true,
 		slidesToShow: 5,
+		autoplay: true,
+		responsive:[
+			{
+				breakpoint: 1500,
+				settings:{
+					slidesToShow: 4
+				}
+			},{
+				breakpoint: 1500,
+				settings:{
+					slidesToShow: 3
+				}
+			},{
+				breakpoint: 1201,
+				settings:{
+					slidesToShow: 2
+				}
+			},{
+				breakpoint: 600,
+				settings:{
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 	$('.partners__slider-2').slick({
 		arrows: false,
-		adaptiveHeight: true,
 		slidesToShow: 5,
+		autoplay: true,
+		responsive:[
+			{
+				breakpoint: 1500,
+				settings:{
+					slidesToShow: 4
+				}
+			},{
+				breakpoint: 1500,
+				settings:{
+					slidesToShow: 3
+				}
+			},{
+				breakpoint: 1201,
+				settings:{
+					slidesToShow: 2
+				}
+			},{
+				breakpoint: 600,
+				settings:{
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 });
