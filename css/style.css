@@ -126,6 +126,45 @@ body.lock {
   font-weight: 700;
 }
 
+.scrollback {
+  position: fixed;
+  bottom: 150px;
+  right: 40px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.scrollback:hover {
+  border: 1px solid #4F4F4F;
+}
+
+.scrollback img {
+  max-width: 20px;
+}
+
+.scrollback.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .splash-main {
   position: relative;
   z-index: 0;
