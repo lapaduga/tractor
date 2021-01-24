@@ -85,11 +85,11 @@ body {
 	text-decoration-line: underline;
 	text-transform: uppercase;
 	color: #ffffff;
-	@media (max-width:1365px) {
+	@media (max-width: 1365px) {
 		font-size: 36px;
 		line-height: 40px;
 	}
-	@media (max-width:767px) {
+	@media (max-width: 767px) {
 		font-size: 30px;
 	}
 }
@@ -1163,21 +1163,21 @@ body {
 
 .main {
 	flex: 1 1 auto;
-	padding: 215px 0 0 0;
-	@media (max-width:992px) {
-		padding: 120px 0 0 0;
-	}
 }
 
 // mainscreen
 
 .mainscreen {
-	margin: 0 0 80px 0;
+	padding: 215px 0 160px 0;
+	background: url("../img/mainscreen/bg.png") bottom right no-repeat;
+	@media (max-width:992px) {
+		padding: 120px 0 100px 0;
+	}
 	&__body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			flex-direction: column;
 		}
 	}
@@ -1188,10 +1188,10 @@ body {
 		img {
 			max-width: 100%;
 		}
-		@media (max-width:1365px) {
+		@media (max-width: 1365px) {
 			flex: 0 0 500px;
 		}
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			flex: none;
 			margin: 0 0 20px 0;
 		}
@@ -1199,21 +1199,21 @@ body {
 
 	&__info {
 		flex: 0 1 800px;
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			flex: none;
 		}
 	}
 
 	&__date {
 		margin: 0 0 27px 0;
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			margin: 0 0 15px 0;
 		}
 	}
 
 	&__title {
 		margin: 0 0 27px 0;
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			margin: 0 0 15px 0;
 		}
 	}
@@ -1223,21 +1223,21 @@ body {
 		font-size: 18px;
 		line-height: 30px;
 		margin: 0 0 70px 0;
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			margin: 0 0 15px 0;
 		}
 	}
 
 	&__link {
-		@media (min-width:1024px) {
-			&:hover{
-				.icon__arrow{
-					transform: translate(7px,0);
+		@media (min-width: 1024px) {
+			&:hover {
+				.icon__arrow {
+					transform: translate(7px, 0);
 				}
-				.mainscreen__more{
-					&::before{
+				.mainscreen__more {
+					&::before {
 						width: 100%;
-						transform: translate(0,0);
+						transform: translate(0, 0);
 					}
 				}
 			}
@@ -1259,8 +1259,8 @@ body {
 		position: relative;
 		left: 96px;
 		top: 28px;
-		&::before{
-			content: '';
+		&::before {
+			content: "";
 			transition: all 0.3s ease 0s;
 			position: absolute;
 			bottom: 0;
@@ -1268,7 +1268,7 @@ body {
 			display: inline-block;
 			height: 1px;
 			width: 0%;
-			transform: translate(-40px,0);
+			transform: translate(-40px, 0);
 			background: #fff;
 		}
 	}

@@ -1715,17 +1715,17 @@ body.lock {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 215px 0 0 0;
-}
-
-@media (max-width: 992px) {
-  .main {
-    padding: 120px 0 0 0;
-  }
 }
 
 .mainscreen {
-  margin: 0 0 80px 0;
+  padding: 215px 0 160px 0;
+  background: url("../img/mainscreen/bg.png") bottom right no-repeat;
+}
+
+@media (max-width: 992px) {
+  .mainscreen {
+    padding: 120px 0 100px 0;
+  }
 }
 
 .mainscreen__body {
@@ -1851,7 +1851,7 @@ body.lock {
 }
 
 .mainscreen__more::before {
-  content: '';
+  content: "";
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: absolute;
