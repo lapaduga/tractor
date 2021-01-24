@@ -49,23 +49,89 @@ body {
 	opacity: 0;
 	visibility: hidden;
 	z-index: 10;
-	img{
+	img {
 		max-width: 20px;
 	}
-	@media (min-width:1024px) {
-		&:hover{
-			border: 1px solid #4F4F4F;
+	@media (min-width: 1024px) {
+		&:hover {
+			border: 1px solid #4f4f4f;
 		}
 	}
-	&.visible{
+	&.visible {
 		opacity: 1;
 		visibility: visible;
 	}
-	@media (max-width:767px) {
+	@media (max-width: 767px) {
 		width: 50px;
 		height: 50px;
 		bottom: 50px;
 		right: 20px;
+	}
+}
+.date {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	color: #4f4f4f;
+}
+.title {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: bold;
+	font-size: 49px;
+	line-height: 70px;
+	text-decoration-line: underline;
+	text-transform: uppercase;
+	color: #ffffff;
+	@media (max-width:1365px) {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	@media (max-width:767px) {
+		font-size: 30px;
+	}
+}
+.icon {
+	position: relative;
+	display: inline-block;
+	&__circle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+		border: 1px solid #fff;
+	}
+
+	&__arrow {
+		transition: all 0.3s ease 0s;
+		position: absolute;
+		top: 23px;
+		left: 23px;
+		display: inline-block;
+		height: 1px;
+		width: 48px;
+		background: #fff;
+		&:after,
+		&:before {
+			content: "";
+			position: absolute;
+			right: 0;
+			background: #fff;
+			width: 1px;
+			height: 10px;
+			display: inline-block;
+		}
+		&:after {
+			transform: rotate(45deg) translate(-2px, 1px);
+		}
+		&::before {
+			transform: rotate(-45deg) translate(4px, -7px);
+		}
 	}
 }
 
@@ -344,15 +410,15 @@ body {
 			background-color: #fff;
 			transition: all 0.3s ease 0s;
 		}
-		&.shrink{
+		&.shrink {
 			flex: 0 0 180px;
-			.header__image{
+			.header__image {
 				flex: 0 0 50px;
 			}
-			span{
+			span {
 				bottom: -18px;
 			}
-			.header__descriptor{
+			.header__descriptor {
 				font-size: 14px;
 				p:first-child {
 					margin: 0 0 0 12px;
@@ -389,7 +455,7 @@ body {
 		font-size: 16px;
 		text-transform: uppercase;
 		color: #ffffff;
-		p{
+		p {
 			transition: all 0.3s ease 0s;
 		}
 		p:first-child {
@@ -881,9 +947,9 @@ body {
 		img {
 			max-width: 24px;
 		}
-		@media (min-width:1024px) {
-			&:hover{
-				border: 1px solid #4F4F4F;
+		@media (min-width: 1024px) {
+			&:hover {
+				border: 1px solid #4f4f4f;
 			}
 		}
 		@media (max-width: 767px) {
@@ -1097,4 +1163,113 @@ body {
 
 .main {
 	flex: 1 1 auto;
+	padding: 215px 0 0 0;
+	@media (max-width:992px) {
+		padding: 120px 0 0 0;
+	}
+}
+
+// mainscreen
+
+.mainscreen {
+	margin: 0 0 80px 0;
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width:992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__image {
+		margin: 0 20px 0 0;
+		flex: 0 0 756px;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width:1365px) {
+			flex: 0 0 500px;
+		}
+		@media (max-width:992px) {
+			flex: none;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	&__info {
+		flex: 0 1 800px;
+		@media (max-width:992px) {
+			flex: none;
+		}
+	}
+
+	&__date {
+		margin: 0 0 27px 0;
+		@media (max-width:992px) {
+			margin: 0 0 15px 0;
+		}
+	}
+
+	&__title {
+		margin: 0 0 27px 0;
+		@media (max-width:992px) {
+			margin: 0 0 15px 0;
+		}
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 30px;
+		margin: 0 0 70px 0;
+		@media (max-width:992px) {
+			margin: 0 0 15px 0;
+		}
+	}
+
+	&__link {
+		@media (min-width:1024px) {
+			&:hover{
+				.icon__arrow{
+					transform: translate(7px,0);
+				}
+				.mainscreen__more{
+					&::before{
+						width: 100%;
+						transform: translate(0,0);
+					}
+				}
+			}
+		}
+	}
+
+	&__icon {
+	}
+
+	&__more {
+		position: relative;
+		font-weight: bold;
+		font-size: 13px;
+		line-height: 24px;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: #ffffff;
+		display: inline-block;
+		position: relative;
+		left: 96px;
+		top: 28px;
+		&::before{
+			content: '';
+			transition: all 0.3s ease 0s;
+			position: absolute;
+			bottom: 0;
+			left: 0px;
+			display: inline-block;
+			height: 1px;
+			width: 0%;
+			transform: translate(-40px,0);
+			background: #fff;
+		}
+	}
 }
