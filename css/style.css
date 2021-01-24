@@ -153,17 +153,28 @@ body.lock {
   z-index: 10;
 }
 
-.scrollback:hover {
-  border: 1px solid #4F4F4F;
-}
-
 .scrollback img {
   max-width: 20px;
+}
+
+@media (min-width: 1024px) {
+  .scrollback:hover {
+    border: 1px solid #4F4F4F;
+  }
 }
 
 .scrollback.visible {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 767px) {
+  .scrollback {
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    right: 20px;
+  }
 }
 
 .splash-main {
