@@ -1916,17 +1916,30 @@ body.lock {
 
 .partners__blocks {
   position: relative;
-  padding: 50px;
+  padding: 50px 0 50px 20px;
+  min-width: 0;
 }
 
 .partners__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.partners__block:last-child {
-  display: none;
+.partners__block.absolute {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.partners__subtitle {
+  margin: 0 80px 0 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 140px;
+          flex: 0 0 140px;
 }
 
 .partners__slider {
@@ -1958,4 +1971,11 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.partners__slider-item {
+  text-align: center;
 }

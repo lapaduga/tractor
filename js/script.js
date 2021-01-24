@@ -61,16 +61,26 @@ $(document).ready(function () {
 		$('#tab-heading-1').addClass('inactive');
 		$('#tab_02').fadeOut(0);
 		$('#tab_01').fadeIn(300);
+		$('#tab_02').removeClass('absolute');
 	});
 	$('#tab-heading-2').on('click', function () {
 		$('#tab-heading-1').removeClass('inactive');
 		$('#tab-heading-2').addClass('inactive');
 		$('#tab_01').fadeOut(0);
 		$('#tab_02').fadeIn(300);
+		$('#tab_02').removeClass('absolute');
+		$('.partners__slider-2').slick('refresh');
 	});
 
 	// partners slider
-	$('.partners__slider').slick({
-		arrows: false
+	$('.partners__slider-1').slick({
+		arrows: false,
+		adaptiveHeight: true,
+		slidesToShow: 5,
+	});
+	$('.partners__slider-2').slick({
+		arrows: false,
+		adaptiveHeight: true,
+		slidesToShow: 5,
 	});
 });

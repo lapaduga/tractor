@@ -1309,17 +1309,23 @@ body {
 
 	&__blocks {
 		position: relative;
-		padding: 50px;
+		padding: 50px 0 50px 20px;
+		min-width: 0;
 	}
 
 	&__block {
 		display: flex;
-		&:last-child{
-			display: none;
+		align-items: center;
+		&.absolute{
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
 		}
 	}
 
 	&__subtitle {
+		margin: 0 80px 0 0;
+		flex: 0 0 140px;
 	}
 
 	&__slider {
@@ -1340,6 +1346,7 @@ body {
 		/* Лента слайдов */
 		.slick-track {
 			display: flex;
+			align-items: flex-start;
 		}
 		/* Слайд */
 		.slick-slide {
@@ -1382,5 +1389,6 @@ body {
 	}
 
 	&__slider-item {
+		text-align: center;
 	}
 }
