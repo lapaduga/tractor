@@ -11,6 +11,7 @@ body {
 	}
 }
 .wrapper {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
@@ -29,6 +30,34 @@ body {
 	text-transform: uppercase;
 	span {
 		font-weight: 700;
+	}
+}
+.scrollback {
+	position: fixed;
+	bottom: 150px;
+	right: 40px;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background: #141414;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10;
+	&:hover{
+		border: 1px solid #4F4F4F;
+	}
+	img{
+		max-width: 20px;
+	}
+	&.visible{
+		opacity: 1;
+		visibility: visible;
 	}
 }
 
@@ -839,6 +868,11 @@ body {
 		align-items: center;
 		justify-content: center;
 		margin: 0px 0px 0px 20px;
+		border: 1px solid transparent;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			border: 1px solid #4F4F4F;
+		}
 		img {
 			max-width: 24px;
 		}
