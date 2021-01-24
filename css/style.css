@@ -152,8 +152,10 @@ body.lock {
   z-index: 10;
 }
 
-.scrollback:hover {
-  border: 1px solid #4F4F4F;
+@media (min-width: 1024px) {
+  .scrollback:hover {
+    border: 1px solid #4F4F4F;
+  }
 }
 
 .scrollback img {
