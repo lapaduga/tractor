@@ -130,7 +130,28 @@ $(document).ready(function () {
 	});
 
 	// last-news slider
-	/* $('.last-news__slider').slick({
-		slidesToShow: 4
-	}); */
+	$('.last-news__slider').slick({
+		slidesToShow: 4,
+		initialSlide: 0,
+		infinite: false,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 1366,
+				settings: {
+					slidesToShow: 3
+				}
+			},{
+				breakpoint: 993,
+				settings: {
+					slidesToShow: 2
+				}
+			},{
+				breakpoint: 501,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
 });
