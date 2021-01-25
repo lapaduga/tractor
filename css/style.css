@@ -1720,7 +1720,7 @@ body.lock {
 
 .mainscreen {
   padding: 215px 0 160px 0;
-  background: url("../img/mainscreen/bg.png") bottom right no-repeat;
+  background: url("../img/home/mainscreen/bg.png") bottom right no-repeat;
 }
 
 @media (max-width: 992px) {
