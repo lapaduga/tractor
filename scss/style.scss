@@ -730,12 +730,6 @@ body {
 			}
 		}
 		&.active {
-			.header__burger-icon {
-				transform: translate(0, 12px);
-				span {
-					background: #4f4f4f;
-				}
-			}
 			.header__burger-menu {
 				opacity: 0;
 				visibility: hidden;
@@ -746,16 +740,20 @@ body {
 				visibility: visible;
 			}
 			.header__burger-icon {
+				transform: translate(0, 12px);
 				width: 40px;
 				span {
+					background: #4f4f4f;
+				}
+				span {
 					&:first-child {
-						transform: rotate(45deg) translate(3px, 0px);
+						transform: rotate(45deg) translate(4px, 1px);
 					}
 					&:nth-child(2) {
 						transform: rotate(-45deg);
 					}
 					&:last-child {
-						transform: rotate(45deg) translate(-3px, 1px);
+						transform: rotate(45deg) translate(-4px, 2px);
 					}
 				}
 			}
