@@ -807,6 +807,10 @@ body.lock {
   transition: all 0.3s ease 0s;
 }
 
+.header__list li .underline.lift {
+  bottom: -20px;
+}
+
 .header__list li a:hover + .underline {
   width: 100%;
   left: 0;
@@ -887,6 +891,10 @@ body.lock {
   visibility: hidden;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.header__visually-impaired span:last-child.lift {
+  bottom: -16px;
 }
 
 .header__visually-impaired:hover span:last-child {

@@ -520,6 +520,9 @@ body {
 				opacity: 0;
 				visibility: hidden;
 				transition: all 0.3s ease 0s;
+				&.lift{
+					bottom: -20px;
+				}
 			}
 			a:hover + .underline {
 				width: 100%;
@@ -578,6 +581,9 @@ body {
 				opacity: 0;
 				visibility: hidden;
 				transition: all 0.3s ease 0s;
+				&.lift{
+					bottom: -16px;
+				}
 			}
 		}
 		&:hover {
