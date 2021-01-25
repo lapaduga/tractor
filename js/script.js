@@ -1,13 +1,11 @@
 $(document).ready(function () {
 	const scrollBack = document.querySelector('#scrollback');
 
-
 	// burger menu
 	$('.header__burger').on('click', function () {
 		$('.header__burger, .menu-board').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
-
 
 	//header height on scroll behaviour
 	window.onscroll = function () { scrollFunction() };
@@ -37,19 +35,16 @@ $(document).ready(function () {
 		}
 	}
 
-
 	// scrollback
 	$(scrollBack).click(function () {
 		$('html, body').animate({ scrollTop: 0 }, 500);
 		return false;
 	})
 
-
 	// map
 	$('.footer__map-bar').on('click', function () {
 		$('.footer__see').fadeOut(300);
 	});
-
 
 	// smooth scroll
 	$("body").on('click', '[href*="#"]', function (e) {
@@ -57,7 +52,6 @@ $(document).ready(function () {
 		$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
 		e.preventDefault();
 	});
-
 
 	// partners tabs
 	$('#tab-heading-1').on('click', function () {
@@ -134,4 +128,9 @@ $(document).ready(function () {
 			}
 		]
 	});
+
+	// last-news slider
+	/* $('.last-news__slider').slick({
+		slidesToShow: 4
+	}); */
 });
