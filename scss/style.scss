@@ -1900,6 +1900,9 @@ body {
 	}
 
 	#media__videos{
+		.media__hover{
+			background: url("../img/home/media/play.png") center/60px 60px no-repeat, rgba(20, 20, 20, 0.6);
+		}
 		@media (max-width:600px) {
 			.universal-link{
 				width: 225px;
