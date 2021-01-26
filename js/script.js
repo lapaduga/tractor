@@ -156,12 +156,17 @@ $(document).ready(function () {
 	});
 
 	// media tabs
+	$('#media__videos').fadeOut(0);
 	$('#media__tab_1').on('click', function () {
 		$('#media__tab_1').addClass('overline');
 		$('#media__tab_2').removeClass('overline');
+		$('#media__videos').fadeOut(0);
+		$('#media__pics').fadeIn(300);
 	});
 	$('#media__tab_2').on('click', function () {
 		$('#media__tab_2').addClass('overline');
 		$('#media__tab_1').removeClass('overline');
+		$('#media__pics').fadeOut(0);
+		$('#media__videos').fadeIn(300);
 	});
 });
