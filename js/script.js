@@ -141,17 +141,27 @@ $(document).ready(function () {
 				settings: {
 					slidesToShow: 3
 				}
-			},{
+			}, {
 				breakpoint: 993,
 				settings: {
 					slidesToShow: 2
 				}
-			},{
+			}, {
 				breakpoint: 501,
 				settings: {
 					slidesToShow: 1
 				}
 			}
 		]
+	});
+
+	// media tabs
+	$('#media__tab_1').on('click', function () {
+		$('#media__tab_1').addClass('overline');
+		$('#media__tab_2').removeClass('overline');
+	});
+	$('#media__tab_2').on('click', function () {
+		$('#media__tab_2').addClass('overline');
+		$('#media__tab_1').removeClass('overline');
 	});
 });
