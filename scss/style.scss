@@ -747,13 +747,17 @@ body {
 				}
 				span {
 					&:first-child {
-						transform: rotate(45deg) translate(4px, 1px);
+						width: 100%;
+						transform: rotate(45deg) translate(6px, 7px);
 					}
 					&:nth-child(2) {
 						transform: rotate(-45deg);
 					}
 					&:last-child {
-						transform: rotate(45deg) translate(-4px, 2px);
+						width: 0;
+						opacity: 0;
+						visibility: hidden;
+						transform: scale(0);
 					}
 				}
 			}

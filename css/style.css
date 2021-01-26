@@ -1086,8 +1086,9 @@ body.lock {
 }
 
 .header__burger.active .header__burger-icon span:first-child {
-  -webkit-transform: rotate(45deg) translate(4px, 1px);
-          transform: rotate(45deg) translate(4px, 1px);
+  width: 100%;
+  -webkit-transform: rotate(45deg) translate(6px, 7px);
+          transform: rotate(45deg) translate(6px, 7px);
 }
 
 .header__burger.active .header__burger-icon span:nth-child(2) {
@@ -1096,8 +1097,11 @@ body.lock {
 }
 
 .header__burger.active .header__burger-icon span:last-child {
-  -webkit-transform: rotate(45deg) translate(-4px, 2px);
-          transform: rotate(45deg) translate(-4px, 2px);
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .header__burger-icon {
