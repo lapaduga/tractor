@@ -2795,7 +2795,13 @@ body.lock {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -12px;
+  margin: 0 -12px 80px -12px;
+}
+
+@media (max-width: 767px) {
+  .news__canvas {
+    margin: 0 -12px 20px -12px;
+  }
 }
 
 .news__item {
