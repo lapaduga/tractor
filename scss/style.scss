@@ -1986,7 +1986,7 @@ body {
 	}
 
 	&__item {
-		margin: 80px 12px;
+		margin: 80px 12px 0px 12px;
 		flex: 1 1 23%;
 		position: relative;
 		.ln-item {
@@ -2018,7 +2018,7 @@ body {
 			flex: 1 1 48%;
 		}
 		@media (max-width: 1365px) {
-			margin: 40px 12px;
+			margin: 80px 12px 0px 12px;
 			&:nth-of-type(n) {
 				flex: 1 1 31%;
 			}

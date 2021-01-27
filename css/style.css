@@ -2799,7 +2799,7 @@ body.lock {
 }
 
 .news__item {
-  margin: 80px 12px;
+  margin: 80px 12px 0px 12px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 23%;
           flex: 1 1 23%;
@@ -2830,7 +2830,7 @@ body.lock {
 
 @media (max-width: 1365px) {
   .news__item {
-    margin: 40px 12px;
+    margin: 80px 12px 0px 12px;
   }
   .news__item:nth-of-type(n) {
     -webkit-box-flex: 1;
