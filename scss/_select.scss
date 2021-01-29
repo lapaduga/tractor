@@ -1,0 +1,64 @@
+.custom-select-container {
+	display: inline-block;
+	position: relative;
+}
+
+.custom-select-container:focus > .custom-select-value{
+	border: 1px solid white;
+	outline: none;
+}
+
+.custom-select-value {
+	border: 1px solid transparent;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 250px;
+	padding: 0.25rem 0.5rem;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.3s ease 0s;
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 9px;
+		background: url("../img/schedule/arrow.svg") center no-repeat;
+	}
+}
+
+.custom-select-options {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	border-top: none;
+	max-height: 330px;
+	overflow-y: auto;
+	background: #141414;
+	transition: all 0.3s ease 0s;
+	padding: 20px 0;
+	&.show {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.custom-select-option {
+	padding: 5px 30px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	color: #6a6a6a;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	text-transform: capitalize;
+	&.selected {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	&:hover {
+		color: #fff;
+	}
+}

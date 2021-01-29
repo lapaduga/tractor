@@ -87,6 +87,87 @@ h6 {
   font-weight: 700;
 }
 
+.custom-select-container {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-select-container:focus > .custom-select-value {
+  border: 1px solid white;
+  outline: none;
+}
+
+.custom-select-value {
+  border: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 250px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.custom-select-value:after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 9px;
+  background: url("../img/schedule/arrow.svg") center no-repeat;
+}
+
+.custom-select-options {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-top: none;
+  max-height: 330px;
+  overflow-y: auto;
+  background: #141414;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding: 20px 0;
+}
+
+.custom-select-options.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.custom-select-option {
+  padding: 5px 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #6a6a6a;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.custom-select-option.selected {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-select-option:hover {
+  color: #fff;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   color: #fff;

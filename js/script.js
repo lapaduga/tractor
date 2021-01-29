@@ -1,3 +1,5 @@
+import Select from "./select.js"
+
 $(document).ready(function () {
 	const scrollBack = document.querySelector('#scrollback');
 
@@ -168,5 +170,12 @@ $(document).ready(function () {
 		$('#media__tab_1').removeClass('overline');
 		$('#media__pics').fadeOut(0);
 		$('#media__videos').fadeIn(300);
+	});
+
+	// select
+	const selectElements = document.querySelectorAll('[data-custom]');
+
+	selectElements.forEach(selectElement => {
+		new Select(selectElement);
 	});
 });
