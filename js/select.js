@@ -58,6 +58,7 @@ function setupCustomElement(select) {
 		optionElement.addEventListener('click', () => {
 			select.selectValue(option.value);
 			select.optionsCustomElement.classList.remove('show');
+			select.labelElement.classList.remove('spin');
 		});
 		select.optionsCustomElement.append(optionElement);
 	});
@@ -65,10 +66,12 @@ function setupCustomElement(select) {
 
 	select.labelElement.addEventListener('click', () => {
 		select.optionsCustomElement.classList.toggle('show');
+		select.labelElement.classList.toggle('spin');
 	});
 
 	select.customElement.addEventListener('blur', () => {
 		select.optionsCustomElement.classList.remove('show');
+		select.labelElement.classList.remove('spin');
 	});
 
 	let debounceTimeout;
@@ -78,6 +81,7 @@ function setupCustomElement(select) {
 		switch (e.code) {
 			case "Space":
 				select.optionsCustomElement.classList.toggle('show');
+				select.labelElement.classList.toggle('spin');
 				break;
 			case "ArrowUp": {
 				const prevOption = select.options[select.selectedOptionIndex - 1];
@@ -96,6 +100,7 @@ function setupCustomElement(select) {
 			case "Enter":
 			case "Escape":
 				select.optionsCustomElement.classList.remove("show");
+				select.labelElement.classList.toggle('spin');
 				break;
 			default: {
 				clearTimeout(debounceTimeout);

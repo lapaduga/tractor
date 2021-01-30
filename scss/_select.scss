@@ -3,27 +3,33 @@
 	position: relative;
 }
 
-.custom-select-container:focus > .custom-select-value{
-	border: 1px solid white;
-	outline: none;
-}
-
 .custom-select-value {
-	border: 1px solid transparent;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 250px;
-	padding: 0.25rem 0.5rem;
+	width: 180px;
 	cursor: pointer;
 	user-select: none;
 	transition: all 0.3s ease 0s;
+    color: #6a6a6a;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: capitalize;
 	&:after {
 		content: "";
 		display: inline-block;
 		width: 16px;
 		height: 9px;
 		background: url("../img/schedule/arrow.svg") center no-repeat;
+		transition: all 0.3s ease 0s;
+		margin: 0px 0px 0px 10px;
+	}
+	&.spin{
+		&:after {
+			content: "";
+			transform: rotate(-180deg);
+		}
 	}
 }
 
@@ -33,6 +39,7 @@
 	position: absolute;
 	padding: 0;
 	margin: 0;
+	z-index: 1;
 	width: 100%;
 	border-top: none;
 	max-height: 330px;

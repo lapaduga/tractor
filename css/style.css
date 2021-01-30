@@ -92,13 +92,7 @@ h6 {
   position: relative;
 }
 
-.custom-select-container:focus > .custom-select-value {
-  border: 1px solid white;
-  outline: none;
-}
-
 .custom-select-value {
-  border: 1px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,8 +102,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 250px;
-  padding: 0.25rem 0.5rem;
+  width: 180px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -117,6 +110,11 @@ h6 {
           user-select: none;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  color: #6a6a6a;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: capitalize;
 }
 
 .custom-select-value:after {
@@ -125,6 +123,15 @@ h6 {
   width: 16px;
   height: 9px;
   background: url("../img/schedule/arrow.svg") center no-repeat;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin: 0px 0px 0px 10px;
+}
+
+.custom-select-value.spin:after {
+  content: "";
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .custom-select-options {
@@ -133,6 +140,7 @@ h6 {
   position: absolute;
   padding: 0;
   margin: 0;
+  z-index: 1;
   width: 100%;
   border-top: none;
   max-height: 330px;
@@ -3577,11 +3585,27 @@ body.lock {
   margin: 0px 0px 50px 0px;
 }
 
+@media (max-width: 992px) {
+  .schedule__topbar {
+    margin: 0px 0px 30px 0px;
+  }
+}
+
 .schedule__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0px 0px 40px 0px;
+}
+
+@media (max-width: 992px) {
+  .schedule__form {
+    margin: 0px 0px 30px 0px;
+  }
 }
 
 .schedule__label {
@@ -3591,6 +3615,7 @@ body.lock {
   line-height: 24px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  width: 280px;
 }
 
 .schedule__label span {
@@ -3598,7 +3623,7 @@ body.lock {
 }
 
 .schedule__label:not(:last-child) {
-  margin: 0 20px 0 0;
+  margin: 0 0 20px 0;
 }
 
 .schedule__table-wrap {
