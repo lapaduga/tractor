@@ -3622,6 +3622,7 @@ body.lock {
   letter-spacing: -0.03em;
   padding: 40px 15px 40px 0;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .schedule__table tr td:nth-child(even) {
