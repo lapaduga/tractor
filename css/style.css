@@ -3917,7 +3917,6 @@ body.lock {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border: 1px solid transparent;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
