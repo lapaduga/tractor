@@ -2,6 +2,8 @@ import Select from "./select.js"
 
 $(document).ready(function () {
 	const scrollBack = document.querySelector('#scrollback');
+	const form = document.getElementById('contacts__form');
+	const alert = document.querySelector('.contacts__alert');
 
 	// burger menu
 	$('.header__burger').on('click', function () {
@@ -177,4 +179,48 @@ $(document).ready(function () {
 	selectElements.forEach(selectElement => {
 		new Select(selectElement);
 	});
+
+	// contacts form validation
+	form.addEventListener('submit', formSend);
+
+	async function formSend(e) {
+		e.preventDefault();
+
+		let error = formValidate(form);
+
+		let formData = new FormData(form);
+
+		if (error === 0) {
+			alert.classList.remove('active');
+			form.reset();
+		} else {
+			alert.classList.add('active');
+		}
+	}
+	
+	function formValidate(form) {
+		let error = 0;
+		let formReq = document.querySelectorAll('.req');
+
+		for (let index = 0; index < formReq.length; index++) {
+			const input = formReq[index];
+			formRemoveError(input);
+
+			if (input.value === '') {
+				formAddError(input);
+				error++;
+			}
+		}
+		return error;
+	}
+
+	function formAddError(input) {
+		input.parentElement.classList.add('error');
+		input.classList.add('error');
+	}
+
+	function formRemoveError(input) {
+		input.parentElement.classList.remove('error');
+		input.classList.remove('error');
+	}
 });
