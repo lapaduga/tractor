@@ -2,8 +2,8 @@ import Select from "./select.js"
 
 $(document).ready(function () {
 	const scrollBack = document.querySelector('#scrollback');
-	const form = document.getElementById('contacts__form');
-	const alert = document.querySelector('.contacts__alert');
+	/* const form = document.getElementById('contacts__form');
+	const alert = document.querySelector('.contacts__alert'); */
 
 	// burger menu
 	$('.header__burger').on('click', function () {
@@ -136,7 +136,7 @@ $(document).ready(function () {
 	// last-news slider
 	$('.last-news__slider').slick({
 		slidesToShow: 4,
-		initialSlide: 0,
+		initialSlide: 1,
 		infinite: false,
 		adaptiveHeight: true,
 		responsive: [
@@ -181,7 +181,7 @@ $(document).ready(function () {
 	});
 
 	// contacts form validation
-	form.addEventListener('submit', formSend);
+/* 	form.addEventListener('submit', formSend);
 
 	async function formSend(e) {
 		e.preventDefault();
@@ -200,7 +200,7 @@ $(document).ready(function () {
 	
 	function formValidate(form) {
 		let error = 0;
-		let formReq = document.querySelectorAll('.req');
+		let formReq = document.querySelectorAll('._req');
 
 		for (let index = 0; index < formReq.length; index++) {
 			const input = formReq[index];
@@ -215,12 +215,22 @@ $(document).ready(function () {
 	}
 
 	function formAddError(input) {
-		input.parentElement.classList.add('error');
-		input.classList.add('error');
+		input.parentElement.classList.add('_error');
+		input.classList.add('_error');
 	}
 
 	function formRemoveError(input) {
-		input.parentElement.classList.remove('error');
-		input.classList.remove('error');
-	}
+		input.parentElement.classList.remove('_error');
+		input.classList.remove('_error');
+	} */
+
+	// teams tabs
+	$('.to-team').on('click', (e) => {
+		$('#coaches').fadeOut(0);
+		$('#team').fadeIn(300);
+	});
+	$('.to-coaches').on('click', (e) => {
+		$('#team').fadeOut(0);
+		$('#coaches').fadeIn(300);
+	});
 });

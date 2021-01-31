@@ -3080,17 +3080,24 @@ body.lock {
 }
 
 .teams__topbar {
-  margin: 0px 0px 40px 0px;
+  margin: 0px 0px 160px 0px;
 }
 
 @media (max-width: 992px) {
   .teams__topbar {
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 100px 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .teams__topbar {
+    margin: 0px 0px 30px 0px;
   }
 }
 
 .teams__group {
   padding: 0px 0px 10px 0px;
+  display: none;
 }
 
 .teams__headline {
@@ -3953,7 +3960,7 @@ body.lock {
   color: #4f4f4f;
 }
 
-.contacts__input.error {
+.contacts__input._error {
   border: 1px solid red;
 }
 
