@@ -174,7 +174,6 @@ $(document).ready(function () {
 
 	// select
 	const selectElements = document.querySelectorAll('[data-custom]');
-
 	selectElements.forEach(selectElement => {
 		new Select(selectElement);
 	});
