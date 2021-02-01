@@ -224,6 +224,10 @@ body {
 .topbar {
 	display: flex;
 	justify-content: space-between;
+	margin: 0px 0px 70px 0px;
+	@media (max-width: 992px) {
+		margin: 0px 0px 40px 0px;
+	}
 	@media (max-width: 767px) {
 		flex-direction: column;
 		align-items: flex-start;
@@ -289,8 +293,8 @@ body {
 	text-transform: uppercase;
 	color: #4f4f4f;
 }
-.bvi-panel{
-	position: fixed !important; 
+.bvi-panel {
+	position: fixed !important;
 	top: 0;
 	left: 0;
 }
@@ -1144,7 +1148,7 @@ body {
 	&__items {
 		display: flex;
 		justify-content: space-between;
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			flex-direction: column-reverse;
 		}
 	}
@@ -1154,7 +1158,7 @@ body {
 		@media (max-width: 992px) {
 			margin: 0px 20px 16px 0px;
 		}
-		@media (max-width:767px){
+		@media (max-width: 767px) {
 			margin: 0px 10px 16px 10px;
 		}
 	}
@@ -1214,14 +1218,14 @@ body {
 		flex: 1 1 auto;
 		display: flex;
 		flex-wrap: wrap;
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			margin: 0px -10px;
 		}
 	}
 
 	&__column-map {
 		flex: 0 0 390px;
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			flex: none;
 			margin: 0 0 30px 0;
 		}
@@ -1949,7 +1953,7 @@ body {
 	}
 
 	&__item {
-		margin: 80px 12px 0px 12px;
+		margin: 0px 12px 80px 12px;
 		flex: 1 1 23%;
 		position: relative;
 		.ln-item {
@@ -1969,13 +1973,12 @@ body {
 			flex: 1 1 48%;
 		}
 		@media (max-width: 1365px) {
-			margin: 80px 12px 0px 12px;
 			&:nth-of-type(n) {
 				flex: 1 1 31%;
 			}
 		}
 		@media (max-width: 767px) {
-			margin: 20px 12px;
+			margin: 0px 12px;
 		}
 	}
 }
@@ -1999,15 +2002,6 @@ body {
 		}
 	}
 
-	&__topbar {
-		margin: 0px 0px 60px 0px;
-		@media (max-width: 992px) {
-			margin: 0px 0px 50px 0px;
-		}
-		@media (max-width: 767px) {
-			margin: 0px 0px 20px 0px;
-		}
-	}
 	&__info {
 		padding: 0px 0px 100px 0px;
 		margin: 0px 0px 100px 0px;
@@ -2077,15 +2071,21 @@ body {
 		padding: 120px 0 0px 0;
 	}
 
-	&__topbar {
-		margin: 0px 0px 160px 0px;
-		@media (max-width: 992px) {
-			margin: 0px 0px 100px 0px;
-		}
-		@media (max-width:500px) {
-			margin: 0px 0px 30px 0px;
+	&__body {
+		.last-news__slider{
+			margin: 160px 0px 0px 0px;
+			@media (max-width: 992px) {
+				margin: 100px 0px 0px 0px;
+			}
+			@media (max-width: 500px) {
+				margin: 30px 0px 100px 0px;
+			}
+			.ln-item__image{
+				height: 240px;
+			}
 		}
 	}
+
 	&__group {
 		padding: 0px 0px 10px 0px;
 		display: none;
@@ -2179,12 +2179,6 @@ body {
 	@media (max-width: 360px) {
 		padding: 120px 0 20px 0;
 	}
-	&__topbar {
-		margin: 0px 0px 70px 0px;
-		@media (max-width: 992px) {
-			margin: 0px 0px 40px 0px;
-		}
-	}
 
 	&__list {
 		display: flex;
@@ -2197,8 +2191,8 @@ body {
 		padding: 0 12px 60px 12px;
 		position: relative;
 		transition: all 0.3s ease 0s;
-		&:nth-of-type(1),
-		&:nth-of-type(10) {
+		&:nth-of-type(14n+1),
+		&:nth-of-type(14n+10) {
 			flex: 0 0 50%;
 			.gallery__image {
 				padding: 0px;
@@ -2352,12 +2346,7 @@ body {
 	@media (max-width: 360px) {
 		padding: 120px 0 20px 0;
 	}
-	&__topbar {
-		margin: 0px 0px 70px 0px;
-		@media (max-width: 992px) {
-			margin: 0px 0px 40px 0px;
-		}
-	}
+
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
@@ -2442,13 +2431,6 @@ body {
 	}
 	@media (max-width: 360px) {
 		padding: 120px 0 20px 0;
-	}
-
-	&__topbar {
-		margin: 0px 0px 50px 0px;
-		@media (max-width: 992px) {
-			margin: 0px 0px 30px 0px;
-		}
 	}
 
 	&__form {
@@ -2549,16 +2531,8 @@ body {
 		padding: 120px 0 20px 0;
 	}
 
-	&__topbar {
-		margin: 0px 0px 50px 0px;
-		@media (max-width: 992px) {
-			margin: 0px 0px 30px 0px;
-		}
-	}
-
 	h2.contacts__title {
 		margin: 0px 0px 30px 0px;
-
 	}
 
 	&__info {
@@ -2566,7 +2540,7 @@ body {
 		align-items: center;
 		justify-content: space-between;
 		margin: 0px 0px 60px 0px;
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			flex-direction: column;
 			align-items: flex-start;
 		}
@@ -2575,15 +2549,15 @@ body {
 	&__text {
 		flex: 0 0 50%;
 		padding: 0px 20px 0px 0px;
-		@media (max-width:992px){
+		@media (max-width: 992px) {
 			padding: 0;
 		}
 	}
 
 	&__item {
 		margin: 0px 0px 40px 0px;
-		@media (max-width:992px){
-		margin: 0px 0px 30px 0px;
+		@media (max-width: 992px) {
+			margin: 0px 0px 30px 0px;
 		}
 	}
 
@@ -2596,7 +2570,7 @@ body {
 		text-transform: uppercase;
 		color: #4f4f4f;
 		margin: 0px 0px 10px 0px;
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			font-size: 16px;
 			line-height: 20px;
 		}
@@ -2636,7 +2610,7 @@ body {
 				}
 			}
 		}
-		@media (max-width:992px) {
+		@media (max-width: 992px) {
 			font-size: 20px;
 			line-height: 30px;
 		}
@@ -2649,9 +2623,9 @@ body {
 			width: 100%;
 			height: 600px;
 		}
-		@media (max-width:992px){
+		@media (max-width: 992px) {
 			width: 100%;
-			iframe{
+			iframe {
 				height: 300px;
 			}
 		}
@@ -2659,7 +2633,7 @@ body {
 
 	&__form {
 		margin: 0px 0px 60px 0px;
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			margin: 0px 0px 30px 0px;
 		}
 	}
@@ -2670,8 +2644,8 @@ body {
 		line-height: 30px;
 		color: #c4c4c4;
 		margin: 0px 0px 40px 0px;
-		@media (max-width:992px) {
-		margin: 0px 0px 20px 0px;
+		@media (max-width: 992px) {
+			margin: 0px 0px 20px 0px;
 		}
 	}
 
@@ -2679,7 +2653,7 @@ body {
 		display: flex;
 		justify-content: center;
 		margin: 0 24px;
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			flex-direction: column;
 			margin: 0;
 		}
@@ -2709,8 +2683,8 @@ body {
 		&._error {
 			border: 1px solid red;
 		}
-		@media (max-width:767px){
-		margin: 0px 0px 24px 0px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 24px 0px;
 		}
 	}
 	textarea.contacts__input {
@@ -2719,7 +2693,7 @@ body {
 		margin: 0 0 24px 0;
 		resize: vertical;
 		padding: 24px;
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			margin: 0 0 12px 0;
 		}
 	}
@@ -2733,11 +2707,11 @@ body {
 		opacity: 0;
 		visibility: hidden;
 		transition: all 0.3s ease 0s;
-		&.active{
+		&.active {
 			opacity: 1;
 			visibility: visible;
 		}
-		@media (max-width:767px) {
+		@media (max-width: 767px) {
 			margin: 0 0 12px 0;
 			font-size: 14px;
 			line-height: 14px;
