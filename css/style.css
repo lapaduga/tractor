@@ -546,6 +546,12 @@ body.lock {
   color: #4f4f4f;
 }
 
+.bvi-panel {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
+
 /* .fancybox-navigation .fancybox-button {
 	width: 126px;
 	height: 90px;
