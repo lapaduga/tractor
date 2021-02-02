@@ -134,6 +134,12 @@ h6 {
           transform: rotate(-180deg);
 }
 
+@media (max-width: 500px) {
+  .custom-select-value {
+    width: 160px;
+  }
+}
+
 .custom-select-options {
   opacity: 0;
   visibility: hidden;
@@ -174,6 +180,12 @@ h6 {
 
 .custom-select-option:hover {
   color: #fff;
+}
+
+@media (max-width: 500px) {
+  .custom-select-option {
+    padding: 5px 15px;
+  }
 }
 
 body {
@@ -3611,16 +3623,21 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin: 0px 0px 40px 0px;
 }
 
 @media (max-width: 992px) {
   .schedule__form {
     margin: 0px 0px 30px 0px;
+  }
+}
+
+@media (max-width: 360px) {
+  .schedule__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -3631,7 +3648,7 @@ body.lock {
   line-height: 24px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  width: 280px;
+  width: 200px;
 }
 
 .schedule__label span {
@@ -3640,6 +3657,12 @@ body.lock {
 
 .schedule__label:not(:last-child) {
   margin: 0 0 20px 0;
+}
+
+@media (max-width: 500px) {
+  .schedule__label {
+    width: 170px;
+  }
 }
 
 .schedule__table-wrap {

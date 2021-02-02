@@ -11,11 +11,11 @@
 	cursor: pointer;
 	user-select: none;
 	transition: all 0.3s ease 0s;
-    color: #6a6a6a;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-    text-transform: capitalize;
+	color: #6a6a6a;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	text-transform: capitalize;
 	&:after {
 		content: "";
 		display: inline-block;
@@ -25,11 +25,14 @@
 		transition: all 0.3s ease 0s;
 		margin: 0px 0px 0px 10px;
 	}
-	&.spin{
+	&.spin {
 		&:after {
 			content: "";
 			transform: rotate(-180deg);
 		}
+	}
+	@media (max-width:500px) {
+		width: 160px;
 	}
 }
 
@@ -67,5 +70,8 @@
 	}
 	&:hover {
 		color: #fff;
+	}
+	@media (max-width:500px) {
+		padding: 5px 15px;
 	}
 }
