@@ -298,6 +298,11 @@ body {
 	top: 0;
 	left: 0;
 }
+.bvi-body {
+	.header {
+		margin: 100px 0px 0px 0px;
+	}
+}
 
 // fancybox
 
@@ -716,6 +721,12 @@ body {
 				transition: all 0.3s ease 0s;
 				&.lift {
 					bottom: -20px;
+				}
+				&.full {
+					width: 100%;
+					left: 0;
+					opacity: 1;
+					visibility: visible;
 				}
 			}
 			a:hover + .underline {
@@ -2048,7 +2059,7 @@ body {
 	}
 
 	&__text {
-		font-family: 'Raleway', sans-serif !important;
+		font-family: "Raleway", sans-serif !important;
 		h3 {
 			font-weight: 600;
 			font-size: 24px;
@@ -2065,9 +2076,9 @@ body {
 			margin: 0px 0px 20px 0px;
 			color: #fff;
 		}
-		a{
+		a {
 			color: #fff;
-			&:hover{
+			&:hover {
 				text-decoration: underline;
 			}
 		}
@@ -2075,8 +2086,8 @@ body {
 			li {
 				position: relative;
 				padding: 0px 0px 0px 15px;
-				&:before{
-					content: '';
+				&:before {
+					content: "";
 					position: absolute;
 					top: 14px;
 					left: 0;
@@ -2087,14 +2098,14 @@ body {
 				}
 				&:first-child {
 					font-weight: 700;
-					&:before{
+					&:before {
 						display: none;
 					}
 				}
 			}
 		}
-		ol{
-			li{
+		ol {
+			li {
 				padding: 0px 0px 0px 15px;
 				margin: 0px 0px 0px 15px;
 			}

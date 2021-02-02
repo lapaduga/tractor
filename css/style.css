@@ -559,6 +559,10 @@ body.lock {
   left: 0;
 }
 
+.bvi-body .header {
+  margin: 100px 0px 0px 0px;
+}
+
 /* .fancybox-navigation .fancybox-button {
 	width: 126px;
 	height: 90px;
@@ -1135,6 +1139,13 @@ body.lock {
 
 .header__list li .underline.lift {
   bottom: -20px;
+}
+
+.header__list li .underline.full {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .header__list li a:hover + .underline {
@@ -3017,7 +3028,7 @@ body.lock {
 }
 
 .article__text {
-  font-family: 'Raleway', sans-serif !important;
+  font-family: "Raleway", sans-serif !important;
 }
 
 .article__text h3 {
@@ -3052,7 +3063,7 @@ body.lock {
 }
 
 .article__text ul li:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 14px;
   left: 0;
