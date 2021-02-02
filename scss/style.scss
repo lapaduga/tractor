@@ -1937,12 +1937,12 @@ body {
 
 	#media__videos {
 		.media__hover {
-		background: rgba(20, 20, 20, 0.6);
+			background: rgba(20, 20, 20, 0.6);
 			opacity: 1;
 			visibility: visible;
 			transition: all 0s ease 0s;
 			transition: all 0.3s ease 0s;
-			&:hover{
+			&:hover {
 				opacity: 0;
 			}
 		}
@@ -2048,6 +2048,7 @@ body {
 	}
 
 	&__text {
+		font-family: 'Raleway', sans-serif !important;
 		h3 {
 			font-weight: 600;
 			font-size: 24px;
@@ -2062,10 +2063,40 @@ body {
 			line-height: 28px;
 			letter-spacing: -0.02em;
 			margin: 0px 0px 20px 0px;
+			color: #fff;
+		}
+		a{
+			color: #fff;
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 		ul {
-			li:first-child {
-				font-weight: 700;
+			li {
+				position: relative;
+				padding: 0px 0px 0px 15px;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 14px;
+					left: 0;
+					display: inline-block;
+					height: 2px;
+					width: 10px;
+					background: #fff;
+				}
+				&:first-child {
+					font-weight: 700;
+					&:before{
+						display: none;
+					}
+				}
+			}
+		}
+		ol{
+			li{
+				padding: 0px 0px 0px 15px;
+				margin: 0px 0px 0px 15px;
 			}
 		}
 		.article__footnote {
@@ -2093,7 +2124,7 @@ body {
 	}
 
 	&__body {
-		.last-news__slider{
+		.last-news__slider {
 			margin: 160px 0px 0px 0px;
 			@media (max-width: 992px) {
 				margin: 100px 0px 0px 0px;
@@ -2101,7 +2132,7 @@ body {
 			@media (max-width: 500px) {
 				margin: 30px 0px 100px 0px;
 			}
-			.ln-item__image{
+			.ln-item__image {
 				height: 240px;
 			}
 		}
@@ -2212,8 +2243,8 @@ body {
 		padding: 0 12px 60px 12px;
 		position: relative;
 		transition: all 0.3s ease 0s;
-		&:nth-of-type(14n+1),
-		&:nth-of-type(14n+10) {
+		&:nth-of-type(14n + 1),
+		&:nth-of-type(14n + 10) {
 			flex: 0 0 50%;
 			.gallery__image {
 				padding: 0px;
