@@ -2,8 +2,8 @@ import Select from "./select.js"
 
 $(document).ready(function () {
 	const scrollBack = document.querySelector('#scrollback');
-	/* const form = document.getElementById('contacts__form');
-	const alert = document.querySelector('.contacts__alert'); */
+	const form = document.getElementById('contacts__form');
+	const alert = document.querySelector('.contacts__alert');
 
 	// burger menu
 	$('.header__burger').on('click', function () {
@@ -181,7 +181,7 @@ $(document).ready(function () {
 	});
 
 	// contacts form validation
-	/* 	form.addEventListener('submit', formSend);
+		form.addEventListener('submit', formSend);
 	
 		async function formSend(e) {
 			e.preventDefault();
@@ -222,7 +222,7 @@ $(document).ready(function () {
 		function formRemoveError(input) {
 			input.parentElement.classList.remove('_error');
 			input.classList.remove('_error');
-		} */
+		}
 
 	// teams tabs
 	$('.to-team').on('click', (e) => {
