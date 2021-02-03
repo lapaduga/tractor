@@ -1,5 +1,15 @@
 import Select from "./select.js"
 
+	// teams tabs
+	$('.to-team').on('click', (e) => {
+		$('#coaches').fadeOut(0);
+		$('#team').fadeIn(300);
+	});
+	$('.to-coaches').on('click', (e) => {
+		$('#team').fadeOut(0);
+		$('#coaches').fadeIn(300);
+	});
+
 $(document).ready(function () {
 	const scrollBack = document.querySelector('#scrollback');
 	const form = document.getElementById('contacts__form');
@@ -219,14 +229,4 @@ $(document).ready(function () {
 		input.parentElement.classList.remove('_error');
 		input.classList.remove('_error');
 	}
-
-	// teams tabs
-	$('.to-team').on('click', (e) => {
-		$('#coaches').fadeOut(0);
-		$('#team').fadeIn(300);
-	});
-	$('.to-coaches').on('click', (e) => {
-		$('#team').fadeOut(0);
-		$('#coaches').fadeIn(300);
-	});
 });
