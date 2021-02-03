@@ -3043,12 +3043,36 @@ body.lock {
   font-family: "Raleway", sans-serif !important;
 }
 
+.article__text h1 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  margin: 30px 0px;
+}
+
+.article__text h2 {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  margin: 30px 0px;
+}
+
 .article__text h3 {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: -0.02em;
   margin: 30px 0px;
+}
+
+.article__text h4 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  margin: 20px 0px;
 }
 
 .article__text p,
@@ -3094,6 +3118,15 @@ body.lock {
   font-weight: 300;
   font-style: italic;
   margin: 80px 0px 0px 0px;
+}
+
+.article__text table {
+  border-collapse: separate;
+  border: 1px solid #fff;
+}
+
+.article__text td {
+  border: 1px solid #fff;
 }
 
 @media (max-width: 992px) {
