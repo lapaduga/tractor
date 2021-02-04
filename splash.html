@@ -42,7 +42,7 @@
 				</div>
 				<form action="#" class="splash-main__form">
 					<label class="splash-main__label">
-						<input class="splash-main__checkbox" type="checkbox" checked>
+						<input id="noshow" class="splash-main__checkbox" type="checkbox" checked>
 						<span class="splash-main__box"></span>
 						больше не показывать заставку
 					</label>
@@ -50,6 +50,15 @@
 			</div>
 		</div>
 	</main>
+	<script>
+		if (localStorage.getItem('checked') === 'false') {
+			document.getElementById('noshow').checked = true;
+		} else {
+			document.getElementById('noshow').checked = false;
+		}
+	</script>
+
+
 </body>
 
 </html>
