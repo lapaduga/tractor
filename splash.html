@@ -51,11 +51,15 @@
 		</div>
 	</main>
 	<script>
-		if (localStorage.getItem('checked') === 'false') {
-			document.getElementById('noshow').checked = true;
-		} else {
-			document.getElementById('noshow').checked = false;
-		}
+		document.addEventListener("DOMContentLoaded", function (event) {
+			console.log('123');
+			if (localStorage.getItem('checked') === 'false') {
+
+				document.getElementById('noshow').checked = false;
+			} else {
+				document.getElementById('noshow').checked = true;
+			}
+		})
 	</script>
 
 
