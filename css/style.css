@@ -2677,6 +2677,8 @@ body.lock {
   top: 0;
   left: 0;
   pointer-events: none;
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
 }
 
 .media__item:nth-of-type(1) {
@@ -2768,8 +2770,8 @@ body.lock {
             transform: scale(1.02);
   }
   .media__item:hover iframe {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   .media__item:hover .media__hover {
     opacity: 1;

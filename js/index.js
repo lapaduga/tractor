@@ -1,13 +1,12 @@
-if (window.location.pathname === 'https://lapaduga.github.io/tractor/index.html') {
+if ((window.location.pathname === '/') || (window.location.pathname === 'index.html/')) {
 	if (localStorage.getItem('checked') === 'false') {
-		window.location.href = 'https://lapaduga.github.io/tractor/splash.html';
+		window.location.href = window.location.hostname + '/splash.html';
 	}
 }
-document.querySelector('.splash-main__label').onclick = () => {
-	if (document.querySelector('.splash-main__checkbox').checked === true) {
-		localStorage.setItem('checked', 'true');
+document.addEventListener("DOMContentLoaded", function (event) {
+	if (localStorage.getItem('checked') === 'true') {
+		document.getElementById('noshow').checked = true;
+	} else {
+		document.getElementById('noshow').checked = false;
 	}
-	if (document.querySelector('.splash-main__checkbox').checked === false) {
-		localStorage.setItem('checked', 'false');
-	}
-}
+})
