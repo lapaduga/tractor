@@ -7,7 +7,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 180px;
+	width: 190px;
 	cursor: pointer;
 	user-select: none;
 	transition: all 0.3s ease 0s;
@@ -45,7 +45,7 @@
 	z-index: 1;
 	width: 100%;
 	border-top: none;
-	max-height: 330px;
+	max-height: 360px;
 	overflow-y: auto;
 	background: #141414;
 	transition: all 0.3s ease 0s;
@@ -53,6 +53,9 @@
 	&.show {
 		opacity: 1;
 		visibility: visible;
+	}
+	@media (max-width:767px) {
+		max-height: 200px;
 	}
 }
 
