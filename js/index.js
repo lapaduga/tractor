@@ -1,9 +1,7 @@
-if (localStorage.getItem('checked') === 'true') {
-	document.querySelector('.splash-main__checkbox').checked = true;
-	window.location.href = 'https://lapaduga.github.io/tractor/home.html';
-}
-if (localStorage.getItem('checked') === 'false') {
-	document.querySelector('.splash-main__checkbox').checked = false;
+if (window.location.pathname === 'https://lapaduga.github.io/tractor/index.html') {
+	if (localStorage.getItem('checked') === 'false') {
+		window.location.href = 'https://lapaduga.github.io/tractor/splash.html';
+	}
 }
 document.querySelector('.splash-main__label').onclick = () => {
 	if (document.querySelector('.splash-main__checkbox').checked === true) {
