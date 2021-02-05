@@ -200,6 +200,10 @@ $(document).ready(function () {
 		let formData = new FormData(form);
 
 		if (error === 0) {
+			document.querySelector('.popup').classList.add('sent');
+			setTimeout (() => {
+				$('.popup').removeClass('sent');
+			}, 5000);
 			alert.classList.remove('active');
 			form.reset();
 		} else {
