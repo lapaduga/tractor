@@ -203,7 +203,7 @@ $(document).ready(function () {
 			document.querySelector('.popup').classList.add('sent');
 			setTimeout (() => {
 				$('.popup').removeClass('sent');
-			}, 5000);
+			}, 3000);
 			alert.classList.remove('active');
 			form.reset();
 		} else {
