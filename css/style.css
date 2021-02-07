@@ -611,10 +611,18 @@ body.lock {
   left: 0;
 }
 
-@media (min-height: 1080px) {
+@media (min-height: 2160px) {
   .splash-main__video {
     display: none;
   }
+}
+
+.splash-main__video video {
+  position: relative;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0) scale(2);
+          transform: translate(-50%, 0) scale(2);
 }
 
 .splash-main__body {
