@@ -2728,10 +2728,6 @@ body.lock {
   visibility: visible;
 }
 
-.media__item:nth-of-type(4) .media__hover {
-  display: none;
-}
-
 .media__item:nth-of-type(5) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 16.666%;
