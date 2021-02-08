@@ -334,11 +334,11 @@ body {
 		@media (min-height: 2160px) {
 			display: none;
 		}
-		video{
+		video {
 			position: relative;
 			top: 0;
 			left: 50%;
-			transform: translate(-50%,0) scale(2);
+			transform: translate(-50%, 0) scale(2);
 		}
 	}
 
@@ -2823,7 +2823,7 @@ body {
 	opacity: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
-	&.sent{
+	&.sent {
 		animation: popup 3s ease-in-out 0s 1 forwards;
 	}
 	&__body {
@@ -2853,21 +2853,73 @@ body {
 	}
 }
 
-@keyframes popup{
-	0%{
+@keyframes popup {
+	0% {
 		opacity: 0;
 		visibility: hidden;
 	}
-	10%{
+	10% {
 		opacity: 1;
 		visibility: visible;
 	}
-	90%{
+	90% {
 		opacity: 1;
 		visibility: visible;
 	}
-	100%{
+	100% {
 		opacity: 0;
 		visibility: hidden;
+	}
+}
+
+// .spinner
+
+.spin{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 200;
+}
+
+.spinner {
+	animation: rotate 2s linear infinite;
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	width: 50px;
+	height: 50px;
+	& .path {
+		stroke: rgba(255, 255, 255, 0.8);
+		stroke-linecap: round;
+		animation: dash 1.5s ease-in-out infinite;
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke-dasharray: 1, 150;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 90, 150;
+		stroke-dashoffset: -35;
+	}
+	100% {
+		stroke-dasharray: 90, 150;
+		stroke-dashoffset: -124;
 	}
 }
